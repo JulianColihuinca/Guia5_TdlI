@@ -8,8 +8,8 @@ public class Prueba {
 
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		String entrada="1101011001101010010101010100011111";
-		String salida="1001111111100011101101010111110110";
+		String entrada="abcacaabbcacaabcacaaabcaca";
+		String salida= "01010110011001000100010011";
 		System.out.println(Formato.getProbabilidadAPriori(entrada,salida));
 	}
 

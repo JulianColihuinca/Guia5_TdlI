@@ -20,8 +20,8 @@ public class Formato {
 			res+= String.format("A%d         %s              %.3f \n",i,prob.getSimbolo(),prob.getProbabilidad());
 			i++;
 		}
-		double[][] matrizAB= Apriori.getMatrizAB(entrada, salida);
-		res+= "\n\nMatriz A/B:\n";
+		double[][] matrizAB= Apriori.getMatrizBA(entrada, salida);
+		res+= "\n\nMatriz B/A:\n";
 		for (i=0;i<Apriori.getFila();i++) {
 			for (int j=0;j<Apriori.getColumna();j++) {
 				res+= String.format("%.3f ", matrizAB[i][j]);
