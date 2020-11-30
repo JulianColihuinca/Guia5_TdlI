@@ -3,6 +3,7 @@ package formatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import funcion.Aposteriori;
 import funcion.Apriori;
 import prob.Probabilidad;
 
@@ -39,6 +40,19 @@ public class Formato {
 			i++;
 		}
 		
+		return res;
+	}
+	
+	public static String getMatrizAB(String entrada,String salida) {
+		String res="";
+		double[][] matrizAB=Aposteriori.getMatrizAB(entrada, salida);
+		res+= "\n\nMatriz A/B:\n";
+		for (int i=0;i<Aposteriori.getFilas();i++) {
+			for (int j=0;j<Aposteriori.getColumnas();j++) {
+				res+= String.format("%.3f ", matrizAB[i][j]);
+			}
+			res+="\n";
+		}
 		return res;
 	}
 

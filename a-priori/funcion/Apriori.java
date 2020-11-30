@@ -66,11 +66,11 @@ public class Apriori {
 			matriz[fila][columna]= matriz[fila][columna]+1;
 		}	
 		
-		for (int j=0;j<columnas;j++) {
-			double suma=0;
-			for (int i=0;i<filas;i++)
-				suma+= matriz[i][j];
-			for (int i=0;i<filas;i++)
+		for (int i=0;i<filas;i++) {
+			int suma= 0;
+			for (int j=0;j<columnas;j++)
+				suma+=matriz[i][j];
+			for (int j=0;j<columnas;j++)
 				matriz[i][j]/=suma;
 		}
 		
