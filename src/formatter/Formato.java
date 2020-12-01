@@ -55,5 +55,18 @@ public class Formato {
 		}
 		return res;
 	}
+	
+	public static String getMatrizSimultanea(String entrada,String salida) {
+		String res="";
+		double[][] matriz=Aposteriori.getProbabilidadSimultanea(entrada, salida);
+		res+= "\n\nMatriz de Eventos Simultaneos:\n";
+		for (int i=0;i<Aposteriori.getFilas();i++) {
+			for (int j=0;j<Aposteriori.getColumnas();j++) {
+				res+= String.format("%.3f ", matriz[i][j]);
+			}
+			res+="\n";
+		}
+		return res;
+	}
 
 }

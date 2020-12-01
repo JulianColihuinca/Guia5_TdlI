@@ -12,6 +12,7 @@ public class Prueba {
 		String salida= "01010110011001000100010011";
 		System.out.println(Formato.getProbabilidadAPriori(entrada,salida));
 		System.out.println(Formato.getMatrizAB(entrada, salida));
+		System.out.println(Formato.getMatrizSimultanea(entrada, salida));
 	}
 
 }
